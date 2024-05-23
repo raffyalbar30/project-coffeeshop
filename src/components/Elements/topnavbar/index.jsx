@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Sidebar, toggleSidebarFn } from "../Sidebar";
 import { ShoppingCart, toggleShoppingCartFn } from "../ShoppingCart";
 import { Search, toggleSearchFn } from "../Search";
+import Login from "../Login/Login";
 
 const MenuLinks = [
   { id: 1, name: "Home", path: "/" },
@@ -92,6 +93,7 @@ const TopNavbar = ({ cart, handleUpdateQuantity, handleRemoveItem }) => {
         >
           <FiSearch className="h-6 w-6" />
         </a>
+        <div className="flex gap-x-6">
         <a
           href="#"
           className="relative text-white hover:text-primary transition-colors duration-300"
@@ -102,6 +104,8 @@ const TopNavbar = ({ cart, handleUpdateQuantity, handleRemoveItem }) => {
           </span>
           <FiShoppingCart className="h-6 w-6" />
         </a>
+          <Login />
+          </div>
 
         <a
           href="#"
